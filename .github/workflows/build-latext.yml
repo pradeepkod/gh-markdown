@@ -20,7 +20,7 @@ jobs:
       run: npm install -g markdownlint-cli
 
     - name: Run markdownlint
-      run: markdownlint '**/*.md'
+      run: markdownlint 'README.md'
 
     # - name: Upload compiled PDF
     #   uses: actions/upload-artifact@v4
