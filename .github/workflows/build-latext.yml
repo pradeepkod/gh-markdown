@@ -1,4 +1,4 @@
-name: Build PDF using LaTeX document
+name: Build Markdown using GitHub Actions
 
 on:
   push:
