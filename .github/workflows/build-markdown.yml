@@ -16,21 +16,20 @@ jobs:
         cd /tmp
         wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
         zcat < install-tl-unx.tar.gz | tar xf -
-        pwd 
-        ls -al
-        # cd install-tl-*
+        cd install-tl-*
+        pwd
         # perl ./install-tl --no-interaction
         # export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
         # sudo apt-get install -y pandoc
-    - name: convert MarkDown to PDF
-      run: |
-        #pandoc sample.md -o sample-markdown-2-pdf.pdf --pdf-engine=xelatex
-        pandoc --help
-        pdflatex --help
+    # - name: convert MarkDown to PDF
+    #   run: |
+    #     #pandoc sample.md -o sample-markdown-2-pdf.pdf --pdf-engine=xelatex
+    #     pandoc --help
+    #     pdflatex --help
 
-    - name: Upload compiled PDF
-      uses: actions/upload-artifact@v4
-      with:
-        name: mardown-2-pdf
-        path: sample.pdf
+    # - name: Upload compiled PDF
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: mardown-2-pdf
+    #     path: sample.pdf
     
