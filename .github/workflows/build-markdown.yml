@@ -19,7 +19,7 @@ jobs:
         cd install-tl-*/
         pwd
         ls -al
-        # perl ./install-tl --no-interaction
+        sudo perl ./install-tl --no-interaction
         # export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
         # sudo apt-get install -y pandoc
     # - name: convert MarkDown to PDF
