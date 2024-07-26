@@ -1,0 +1,30 @@
+name: Build PDF using LaTeX document
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: latest
+    - run: npm ci && npm test
+
+    - name: Install markdownlint-cli
+      run: npm install -g markdownlint-cli
+
+    - name: Run markdownlint
+      run: markdownlint '**/*.md'
+
+    # - name: Upload compiled PDF
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: latex-2-pdf
+    #     path: sample.pdf
