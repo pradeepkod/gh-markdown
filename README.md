@@ -1,2 +1,2 @@
-"# gh-markdown"
-Sample GitHub action that generates markdown document
+#gh-markdown
+*Sample GitHub action that generates markdown document*
