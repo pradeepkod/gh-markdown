@@ -13,8 +13,6 @@ jobs:
 
     - name: setup LaTex environment
       run: |
-        #sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-extra-utils texlive-latex-extra
-        #sudo apt-get install -y pandoc
         cd /tmp
         curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
         zcat < install-tl-unx.tar.gz | tar xf -
