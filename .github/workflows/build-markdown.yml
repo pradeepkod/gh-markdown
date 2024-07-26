@@ -14,12 +14,14 @@ jobs:
     - name: setup LaTex environment
       run: |
         #sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-extra-utils texlive-latex-extra
-        sudo apt-get install -y pandoc
+        #sudo apt-get install -y pandoc
+        cd /tmp
         curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
         zcat < install-tl-unx.tar.gz | tar xf -
         cd install-tl-*
         perl ./install-tl --no-interaction
         export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
+        sudo apt-get install -y pandoc
     - name: convert MarkDown to PDF
       run: |
         #pandoc sample.md -o sample-markdown-2-pdf.pdf --pdf-engine=xelatex
