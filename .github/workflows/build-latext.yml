@@ -16,7 +16,8 @@ jobs:
       with:
         node-version: latest
 
-    - run: npm ci && npm test
+    - run: npm ci
+    - run: npm test
 
     - name: Install markdownlint-cli
       run: npm install -g markdownlint-cli
