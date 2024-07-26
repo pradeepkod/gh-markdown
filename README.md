@@ -1,2 +1,5 @@
-##gh-markdown
-*Sample GitHub action that generates markdown document*
+```
+# File with header
+
+This is a file with a top level header
+```
